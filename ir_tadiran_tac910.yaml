@@ -2,6 +2,9 @@ esphome:
   name: "tadiran-ac"
   friendly_name: "Tadiran AC"
 
+external_components:
+  - source: github://paradox00/esphome-ir-tadiran-tac910
+
 esp32:
   board: esp32dev
   framework:
