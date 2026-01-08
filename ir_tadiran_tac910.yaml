@@ -1,0 +1,39 @@
+esphome:
+  name: "tadiran-ac"
+  friendly_name: "Tadiran AC"
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+wifi:
+  ssid: "YourSSID"
+  password: "YourPassword"
+
+remote_transmitter:
+  pin: GPIO19
+  carrier_duty_percent: 50%
+  id: my_transmitter
+
+remote_receiver:
+  pin:
+    number: GPIO18
+    inverted: True
+    mode: INPUT_PULLUP
+  dump: all
+  id: my_receiver
+
+climate:
+  - platform: ir_tadiran_tac910
+    name: "Living Room AC"
+    transmitter_id: my_transmitter
+    receiver_id: my_receiver
