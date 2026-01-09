@@ -40,6 +40,8 @@ struct TacData {
 
     void set_current_temp(uint8_t temp) { this->cmd.current_temp = temp - 5; }
     void set_desired_temp(uint8_t temp) { this->cmd.set_temp = temp - 5; }
+    uint8_t get_current_temp() const { return this->cmd.current_temp + 5; }
+    uint8_t get_desired_temp() const { return this->cmd.set_temp + 5; }
     uint8_t get_checksum_for_cmd();
     void prepare();
 };
