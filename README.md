@@ -18,6 +18,9 @@ climate:
 - **Fan Modes**: Auto, Low, Medium, High
 - **Feedback**: Supports receiving status updates from the remote control if a receiver is configured.
 
+## BreadBoard image
+![breadboard-esp32-ir-temp](breadboard-esp32-ir-temp.png)
+
 ## Notes
 
 - This component currently does not advertise support for specific climate modes (Cool, Heat) in its capabilities, focusing on temperature and fan speed control.
